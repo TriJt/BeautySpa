@@ -1,0 +1,171 @@
+@import "./_base.scss";
+@import "./_mixins.scss";
+@import "./_variables.scss";
+
+.header {
+  background-color: $main-bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  height: 70px;
+  transition: height 0.3s ease;
+
+  .container {
+    max-width: 1024px;
+    margin: auto;
+    height: 100%;
+
+    .header__logo {
+      font-size: 50px;
+      margin-left: -50px;
+    }
+    .menu{
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      margin-right: -60px;
+      .menu-link{
+        padding: 0 10px;
+      }
+    }
+  }
+  &__top {
+    @include flex(center, center);
+    position: relative;
+    width: 100%;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    background: #07cbf7;
+    .contact {
+      font-size: 16px;
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+     
+    }
+    .shopping {
+      padding: 5px;
+      background-color: #dc3f5d;
+      font-size: 16px;
+      position: absolute;
+      right: 0;
+      display: flex;
+      gap: 5px;
+      margin-right: 50px;
+    }
+
+  }
+
+  @include tablet {
+    height: $header-tablet-height;
+    box-shadow: $box-shadow;
+  }
+  @include mobile {
+    height: $header-mobile-heaght;
+  }
+
+  &.shrink {
+    height: $header-shrink-height;
+    box-shadow: $box-shadow;
+    .header__top {
+      display: none;
+    }
+  }
+
+  &__logo {
+    @include flex(center, start);
+    position: absolute;
+    height: 100%;
+    @include mobile {
+      @include flex(center, center);
+      inset: 0;
+    }
+    @include tablet {
+      @include flex(center, center);
+      inset: 0;
+    }
+    pointer-events: none;
+    img {
+      height: 28px;
+    }
+  }
+  &__menu {
+    @include flex(center, flex-end);
+    gap: 20px;
+    height: 100%;
+    font-size: 1.8rem;
+    @include mobile {
+      @include flex(center, space-between);
+    }
+    @include tablet {
+      @include flex(center, space-between);
+    }
+    &__left,
+    &__right {
+      @include flex(center, center);
+      gap: 39px;
+
+      &--item:hover {
+        color: $main-color;
+      }
+      &--item.active {
+        font-weight: 600;
+        color: $main-color;
+      }
+      @include breakpoint-down(medium) {
+        gap: 20px;
+      }
+    }
+    &__left {
+      @include tablet {
+        flex-direction: column;
+        background-color: $main-bg;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: flex-start;
+        z-index: 1000;
+        padding-top: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.5 ease;
+        &.active {
+          transform: translateX(0);
+        }
+      }
+
+      &--close {
+        position: absolute;
+        left: 20px;
+        font-size: 2.5rem;
+      }
+    }
+    &__right {
+      line-height: 10px;
+      font-size: 2.3rem;
+      padding: 5px 8px;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      &:hover {
+        background-color: #dc3f5d;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(medium) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@include breakpoint-down(small) {
+  html {
+    font-size: 40%;
+  }
+}

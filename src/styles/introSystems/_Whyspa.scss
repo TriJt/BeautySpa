@@ -1,0 +1,32 @@
+@import "../_base.scss";
+@import "../_mixins.scss";
+@import "../_variables.scss";
+
+.Whyspa__container{
+    max-width: 1024px;
+    margin: auto;
+    .Whyspa-title{
+        font-size: 32px;
+        font-weight: 500;
+        color: $color-title;
+        text-align: center;
+        margin: 40px;
+    }
+    .Whyspa-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        gap: 60px;
+        .whyspaImage.image{
+            width: 100%;
+            background: none;
+        }
+        .Whyspa-dir{
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: 300;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
