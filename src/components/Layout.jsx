@@ -4,8 +4,6 @@ import {
     BrowserRouter,
   } from "react-router-dom";
  
-
-  
 import Header from './Home/Header'
 import Footer from './Footer'
 import Routess from '../routes/Routes'

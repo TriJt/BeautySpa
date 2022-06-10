@@ -1,6 +1,6 @@
 import React from 'react'
-import Helmet from '../conponents/Helmet'
-import Service from '../conponents/Home/Service'
+import Helmet from '../components/Helmet'
+import Service from '../components/Home/Service'
 import img from '../assets/images/banner-da-dang-dich-vu-scaled.jpg'
 const Category_Service = () => {
   return (

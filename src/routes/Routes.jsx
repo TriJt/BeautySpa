@@ -12,7 +12,7 @@ import Product from '../pages/Product'
 import Category_Service from '../pages/Category_Service'
 import Treatment_results from '../pages/Treatment_results'
 import Recruitment from '../pages/Recruitment';
-import Serviceis from '../conponents/Service/Serviceis';
+import Serviceis from '../components/Service/Serviceis';
 
 const Routess = () => {
   return (

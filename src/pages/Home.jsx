@@ -1,22 +1,22 @@
  import React from 'react'
-  import Helmet from '../conponents/Helmet'
+  import Helmet from '../components/Helmet'
 
 
 
 import SliderData from '../assets/fake_data/slider'
 
-import Slider from '../conponents/Home/Slider'
+import Slider from '../components/Home/Slider'
 
-import Taiapp from '../conponents/Home/Taiapp'
-import BgRealistic from '../conponents/Home/BgRealistic'
-import Product from '../conponents/Home/Product'
-import Service from '../conponents/Home/Service'
+import Taiapp from '../components/Home/Taiapp'
+import BgRealistic from '../components/Home/BgRealistic'
+import Product from '../components/Home/Product'
+import Service from '../components/Home/Service'
 import DataProducts from '../assets/fake_data/Products'
-//import Section, {SectionBody, SectionTitle} from '../conponents/Section'
+//import Section, {SectionBody, SectionTitle} from '../components/Section'
 
 // data hình ảnh thực tế
 import treatmentsData from '../assets/fake_data/BgRealistic'
-import Grid from '../conponents/Grid'
+import Grid from '../components/Grid'
 import { Link } from 'react-router-dom'
 
 const Home = () => {

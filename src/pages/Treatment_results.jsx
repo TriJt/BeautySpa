@@ -1,8 +1,8 @@
 import React from 'react'
-import Helmet from '../conponents/Helmet'
-import Section ,{SectionBody, SectionTitle}from '../conponents/Section'
+import Helmet from '../components/Helmet'
+import Section ,{SectionBody, SectionTitle}from '../components/Section'
 import imgbanner from '../assets/images/kquadieutri.jpg'
-import BgRealistic from '../conponents/Home/BgRealistic'
+import BgRealistic from '../components/Home/BgRealistic'
 import treatmentsData from '../assets/fake_data/BgRealistic'
 
 

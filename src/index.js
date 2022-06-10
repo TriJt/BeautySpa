@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './sass/index.scss'
 
-import Layout from './conponents/Layout'
+import Layout from './components/Layout'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

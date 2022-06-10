@@ -1,5 +1,5 @@
 import React from 'react'
-import SystemTotal from '../conponents/introduce/System'
+import SystemTotal from '../components/introduce/System'
 const Introduce = () => {
   return (
     <div className='container'>
