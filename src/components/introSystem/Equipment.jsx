@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../styles/introSystems/_Equipment.scss";
 import Tb1 from "../../assets/images/tb1.jpg";
 import Tb2 from "../../assets/images/tb2.jpg";
 import Tb3 from "../../assets/images/tb3.jpg";

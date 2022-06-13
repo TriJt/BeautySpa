@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "../../styles/introSystems/_Newpaper.scss";
 import { Link } from "react-router-dom";
 import triThuc from "../../assets/images/tt-logo.png";
 // import required modules

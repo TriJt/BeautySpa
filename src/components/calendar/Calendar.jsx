@@ -5,7 +5,6 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaRegCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { BiMessageDetail } from "react-icons/bi";
 
-import "../../styles/_Calendar.scss";
 const Calendar = () => {
   const [open, setOpen] = useState(false); 
   const [open1, setOpen1] = useState(false);

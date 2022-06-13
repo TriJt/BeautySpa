@@ -7,7 +7,6 @@ import "swiper/css/scrollbar";
 // import required modules
 import { FreeMode, Scrollbar, Mousewheel } from "swiper";
 import { AiFillStar } from "react-icons/ai";
-import "../../styles/_Branch.scss";
 import Categories from "./Category";
 import FooterTop from "./FooterTop";
 

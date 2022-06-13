@@ -9,7 +9,6 @@ import Equipment from "./Equipment";
 import Doctor from "./Doctor";
 import Whyspa from "./Whyspa";
 import Newpaper from "./Newpaper";
-import "../../styles/introSystems/_System.scss";
 import Customer from "./Customer";
 import Slice from "./Slice";
 

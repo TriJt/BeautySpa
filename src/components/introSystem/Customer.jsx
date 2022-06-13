@@ -10,7 +10,6 @@ import Kh3 from "../../assets/images/Kh3.jpg";
 import Kh4 from "../../assets/images/Kh4.jpg";
 import Kh5 from "../../assets/images/Kh5.jpg";
 import Kh6 from "../../assets/images/Kh6.png";
-import"../../styles/introSystems/_Customer.scss"
 
 const cusImages = [
   {

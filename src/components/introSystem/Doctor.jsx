@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/introSystems/_Doctor.scss";
 import Image from "../../assets/images/banner-bs.jpg";
 const Doctor = () => {
   return (

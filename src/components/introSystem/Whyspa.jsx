@@ -3,7 +3,6 @@ import W1 from "../../assets/images/w1.jpg";
 import W2 from "../../assets/images/w2.jpg";
 import W3 from "../../assets/images/w3.jpg";
 import W4 from "../../assets/images/w4.jpg";
-import "../../styles/introSystems/_Whyspa.scss";
 
 const whyspaImages = [
   {

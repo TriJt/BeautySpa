@@ -1,7 +1,3 @@
-@import "./_base.scss";
-@import "./_mixins.scss";
-@import "./_variables.scss";
-
 .Branch__container {
   max-width: 1920px;
   padding: 10px 0;
@@ -21,7 +17,7 @@
 
       .Branch-title {
         font-size: 14px;
-        color: $color-title;
+        color: blue;
         margin-left: 10px;
         font-weight: 500;
       }
@@ -39,7 +35,7 @@
           &:hover {
             cursor: pointer;
             background-color: $main-color;
-            color: $bg-color;
+            color: #b1812c;
           }
         }
         .active {
@@ -47,7 +43,7 @@
           margin: 20px 10px;
           padding: 10px;
           border: none;
-          color: $bg-color;
+          color: #b1812c;
           font-size: 12px;
           border-radius: 5px;
         }

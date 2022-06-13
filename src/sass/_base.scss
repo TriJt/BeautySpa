@@ -78,7 +78,7 @@ a{
         margin-top: calc(#{$header-tablet-height} + 20px);
     }
     @include mobile{
-        margin-top: calc(#{$header-mobile-heaght} + 10px);
+        margin-top: calc(#{$header-mobile-height} + 10px);
     }
 }
 
@@ -125,4 +125,7 @@ input{
         background-color: #1374F6;
         color: white;
     }
+}
+.disable-link {
+    pointer-events: none !important;
 }

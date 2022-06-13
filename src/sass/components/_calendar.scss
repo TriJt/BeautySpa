@@ -1,6 +1,3 @@
-@import "./_base.scss";
-@import "./_mixins.scss";
-@import "./_variables.scss";
 
 .Calendar__container {
   max-width: 1920px;
@@ -24,7 +21,7 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      color: $bg-color;
+      color: #b1812c;
       font-size: 30px;
       cursor: pointer;
     }
@@ -35,7 +32,7 @@
       margin: auto;
       border: 1px solid #ec3e2680;
       background-color: white;
-      color: $bg-color;
+      color: #b1812c;
       padding: 30px 30px;
       border-radius: 15px;
 
@@ -80,7 +77,7 @@
         .Slice-Advise-btn {
           font-size: 18px;
           border: none;
-          color: $bg-color;
+          color: #b1812c;
           margin-right: 50px;
           margin-top: 10px;
           padding: 10px 20px;
@@ -102,7 +99,7 @@
           padding: 10px 20px;
           border-radius: 10px;
           cursor: pointer;
-          background-color: $bg-color;
+          background-color: #b1812c;
           &:hover {
             background-color: $main-color;
             box-shadow: rgba(110, 106, 106, 0.4) 0px 0px 10px;
@@ -149,7 +146,7 @@
         border-radius: 10px;
         & h4 {
           font-size: 22px;
-          color: $bg-color;
+          color: #b1812c;
         }
         & p {
           font-size: 14px;
@@ -159,7 +156,7 @@
         .Advise-btn {
           font-size: 18px;
           border: none;
-          color: $bg-color;
+          color: #b1812c;
           margin-bottom: 20px;
           margin-top: 10px;
           padding: 10px 20px;

@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/_FooterTop.scss";
 import Logo from "../../assets/images/logo-spa-1.png";
 import { Link, useLocation } from "react-router-dom";
 import { BsTelephoneFill } from "react-icons/bs";

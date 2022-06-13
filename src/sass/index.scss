@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./keyframe";
 @import "./mixins";
 @import "./base";
 @import "./components/Home/header";
@@ -15,4 +16,25 @@
 @import "./components/Recruitment/Content_body.scss";
 @import "./components//Recruitment/Modal.scss";
 @import "./components/Service/Service";
+
+@import "./components/branch";
+@import "./components/calendar";
+@import "./components/beautiful";
+
+// introSystem cua file style (cu)
+@import './components/introSystems/Customer';
+@import './components/introSystems/Doctor';
+@import './components/introSystems/Equipment';
+@import './components/introSystems/Newpaper';
+@import './components/introSystems/Slice';
+@import './components/introSystems/System';
+@import './components/introSystems/Whyspa';
+
+// introSystem cua file style (cu)
+@import './components/Scars/Comment';
+@import './components/Scars/LogSeou';
+@import './components/Scars/Scars';
+
+@import "./components/footerTop";
+@import "./components/footer";
 

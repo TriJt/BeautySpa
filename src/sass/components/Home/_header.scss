@@ -1,158 +1,409 @@
-.header{
+/* css cho phan header */
+.header {
+  $yellowColor: #b1812c;
+  $radius: 1rem;
+  height: $header-height;
+
+  box-shadow: $box-shadow;
+  z-index: 100;
+  background-color: $main-bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  &__bar {
+    font-size: 1.5rem;
+    background-color: $yellowColor;
+    height: 40px;
+
+    p {
+      height: 100%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__main {
+    position: relative;
+    height: 120px;
+    @include flex(center, space-between);
+    .logo {
+      width: 20rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .buttons {
+      @include flex(center, space-between);
+      height: 4rem;
+      a {
+        height: 100%;
+        @include flex(center, space-between);
+        display: inline-flex;
+        background-color: $yellowColor;
+        padding: 1rem;
+        border-radius: $radius;
+        transition: $transition;
+        &:hover {
+          background-color: #966c21;
+        }
+        &:first-child {
+          margin-right: 1rem;
+        }
+        svg,
+        span {
+          font-size: 3rem;
+          color: white;
+          opacity: 1;
+          transition: $transition;
+        }
+        span {
+          font-size: 2rem;
+          margin-left: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      @include tablet {
+        a {
+          svg {
+            opacity: 0;
+          }
+          &:hover {
+            svg {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+      @include mobile {
+        a {
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .hamberger {
+      font-size: 3rem;
+      cursor: pointer;
+      color: rgba(102, 102, 102, 0.85);
+      transition: $transition;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  &__nav {
+    @include flex(center, center);
+    height: 55px;
+    &--item {
+      position: relative;
+      height: 100%;
+      a {
+        font-size: 1.5rem;
+        @include flex(center, space-between);
+        height: 100%;
+        padding: 0rem 2rem;
+        transition: $transition;
+        color: rgba(102, 102, 102, 0.85);
+        font-weight: 700;
+        &::after {
+          content: "";
+          display: block;
+          width: 3.5rem;
+          height: 0.3rem;
+          background-color: $yellowColor;
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: $transition;
+        }
+        &.active {
+          color: $yellowColor;
+          &::after {
+            opacity: 1;
+          }
+        }
+        &:hover {
+          color: $yellowColor;
+        }
+      }
+      .hover {
+        &__box {
+          position: absolute;
+          top: calc(100% - 10px);
+          left: 50%;
+          transform: translateX(-50%);
+          width: 70rem;
+          height: max-content;
+          background-color: $main-bg;
+          border: 1px solid $yellowColor;
+          opacity: 0;
+          pointer-events: none;
+          padding: 1rem 0.3rem;
+          border-radius: 0 0 10px 10px;
+          overflow-y: auto;
+
+          @include flex(baseline, space-between);
+          flex-wrap: wrap;
+          a {
+            font-weight: initial;
+            color: $yellowColor;
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            width: 100%;
+          }
+          svg {
+            font-size: 10px;
+            color: $yellowColor;
+          }
+        }
+        &__link {
+          width: 50%;
+
+          @include flex(baseline, flex-start);
+          transition: $transition;
+          padding: 0 2rem;
+          &:hover {
+            background-color: $yellowColor;
+            a,
+            svg {
+              color: #fff !important;
+            }
+          }
+        }
+        &__group {
+          width: 50%;
+          li:hover a {
+            color: #000;
+          }
+          .hover__link {
+            width: 100%;
+
+            a {
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+      &:hover {
+        & > ul {
+          opacity: 1;
+          transition: $transition;
+          pointer-events: visible;
+        }
+        & > a::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  /* Tai su dung */
+  .container {
+    @include flex(center, space-between);
+    svg {
+      @include flex(center, center);
+    }
+  }
+  .search {
+    width: 30rem;
+    height: max-content;
+    border: 1px solid $yellowColor;
+    border-radius: $radius;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 0 1rem;
+    input {
+      width: 100%;
+      height: 4rem;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      font-size: 1.5rem;
+    }
+    svg {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $yellowColor;
+      font-size: 1.5rem;
+    }
+  }
+  .logo {
+    a {
+      @include flex(center, center);
+    }
+    img {
+      width: 100%;
+    }
+  }
+  @include tablet {
+    height: $header-tablet-height;
+    &__wrapper,
+    &__main {
+      height: 100%;
+    }
+  }
+  @include mobile {
+    height: $header-mobile-height;
+  }
+}
+/* css cho phan navigator */
+.nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  &__wrapper {
     background-color: $main-bg;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
-    height: 70px ;
-    transition: height 0.3s ease;
-    
-  
-    .container{
-        height: 100%;
-    }
-    &__top{
-        @include flex(center,center);
-        position: relative;
+    width: 260px;
+    height: 100%;
+    padding: 30px 0;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: $transition;
+  }
+  &__list {
+    li {
+      font-size: 2rem;
+      border-bottom: 1px solid #ececec;
+      transition: $transition;
+      cursor: pointer;
+
+      h3 {
+        color: #312a2a;
+      }
+      a {
+        @include flex(center, space-between);
         width: 100%;
-        height: 40px;
-        width: 100%; 
-        color:#fff;
-        background-image: linear-gradient( to right, #A50A3C, #f70938);
-        .contact{
-            font-size: 16px;
-            display: flex;
-            opacity: .5;
-            gap: 10px;
-            &:hover{
-                opacity: 1;
-            }
+        color: rgba(102, 102, 102, 0.85);
+        transition: $transition;
+        padding: 10px 20px;
+        svg {
+          font-size: 3rem;
+          transition: $transition;
         }
-        .shopping{
+      }
+      .drop-down {
+        height: 0;
+        overflow: hidden;
+        li {
+          a {
             padding: 5px;
-            background-color: #dc3f5d;
-            font-size: 16px;
-            position: absolute;
-            right: 0;
-            display: flex;
-            gap: 5px;
-            margin-right: 50px;
+            padding-left: 20px;
+            transition: $transition;
+          }
         }
-    }
-    
-    @include tablet{
-        height: $header-tablet-height;
-        box-shadow: $box-shadow;
-    }
-    @include mobile{
-        height: $header-mobile-heaght;
-    }
-    
-    &.shrink{
-        height: $header-shrink-height;
-        box-shadow: $box-shadow;
-        .header__top{
-            display: none
+        &-group {
+          .title {
+            font-weight: 700;
+          }
         }
-    }
-    
-    &__logo{
-        @include flex(center, flex-start);
-        position: absolute;  
-        height: 100%; 
-        @include mobile{
-            @include flex(center, center);     
-            inset: 0;
+      }
+      &:hover {
+        background-color: #ececec;
+        & > a,
+        svg {
+          color: #000;
         }
-        @include tablet{
-            @include flex(center, center);
-            inset: 0;
-        }
-        pointer-events: none;
-        img{
-            height: 28px;
-        }
-
-    }
-    &__menu{
-        @include flex(center, flex-end);
-        gap: 20px;
-        height: 100%;
-        font-size: 1.8rem;
-        @include mobile{
-            @include flex(center, space-between);
-        }
-        @include tablet{
-            @include flex(center, space-between);
-        }
-        &__left,&__right
-        {
-            @include flex(center, center);
-            gap: 30px;
-
-            &--item:hover{
-                color: $main-color;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      &.active {
+        .drop-down {
+          height: auto;
+          li {
+            a {
+              padding-left: 30px;
             }
-            &--item.active{
-                font-weight: 600;
-                color: $main-color;
+          }
+          &-group {
+            .title {
+              a {
+                padding-left: 30px;
+              }
             }
-            @include breakpoint-down(medium){
-                gap: 20px;
+            li {
+              a {
+                padding-left: 40px;
+              }
             }
+          }
         }
-        &__left{
-            @include tablet{
-                
-                flex-direction: column;
-                background-color: $main-bg;
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100vh;
-                justify-content: flex-start;
-                z-index: 1000;
-                padding-top: 20px;
-                transform: translateX(-100%);
-                transition:transform .5 ease;
-                &.active{
-                    transform: translateX(0);
-                }
-            }
-            
-            &--close{
-                position: absolute;
-                left: 20px;
-                font-size: 2.5rem;
-            }
+        svg {
+          transform: rotate(-180deg);
         }
-        &__right{
-            line-height: 10px;
-            font-size: 2.3rem;
-            padding:5px 8px;
-            border-radius: 5px;
-            border: 1px solid rgba(0,0,0,.08);
-            &:hover{
-                background-color: #dc3f5d;
-                color: #fff;
-
-            }
-        }
+      }
     }
+    & &--search {
+      padding: 10px 20px;
+      cursor: default;
+      &:hover {
+        background-color: inherit;
+      }
+      .search {
+        width: 100%;
+      }
+    }
+    & &--title {
+      padding: 20px;
+      pointer-events: none;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 6rem;
+    color: white;
+    opacity: 0.6;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &.isShow {
+    opacity: 1;
+    pointer-events: visible;
+    .nav__wrapper {
+      transform: translateX(0);
+    }
+  }
 }
 
-
-@include breakpoint-down(medium){
-    html{
-        font-size: 52%;
-    }
+@include breakpoint-down(medium) {
+  html {
+    font-size: 52%;
+  }
 }
 
+@include breakpoint-down(small) {
+  html {
+    font-size: 40%;
+  }
+}
 
-@include breakpoint-down(small){
-    html{
-        font-size: 40%;
-    }
+@include breakpoint-down(medium) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@include breakpoint-down(small) {
+  html {
+    font-size: 40%;
+  }
 }
